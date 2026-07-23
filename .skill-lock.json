@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/skills.git",
       "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
       "installedAt": "2026-02-28T12:40:20.285Z",
-      "updatedAt": "2026-02-28T12:40:20.285Z"
+      "updatedAt": "2026-07-22T11:57:06.056Z"
     },
     "caveman": {
       "source": "JuliusBrussee/caveman",
@@ -24,9 +24,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/leomosley/sonarqube-fixer.git",
       "skillPath": "SKILL.md",
-      "skillFolderHash": "600eef8841908ab22e5578e8d90d69265e9bcd1b",
+      "skillFolderHash": "f4f4e8fc8e7c3f0b57cbb8358357003e101733bd",
       "installedAt": "2026-04-13T11:45:44.480Z",
-      "updatedAt": "2026-04-13T11:45:44.480Z"
+      "updatedAt": "2026-07-22T11:57:10.435Z"
     },
     "go-expert": {
       "source": "personamanagmentlayer/pcl",
@@ -42,28 +42,27 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/shadcn/ui.git",
       "skillPath": "skills/shadcn/SKILL.md",
-      "skillFolderHash": "a7903e883aaeead6ed509468b499310729968ad9",
+      "skillFolderHash": "962eb7ef77f17e0bce530153d4fec2136c5fa061",
       "installedAt": "2026-04-21T08:56:13.088Z",
-      "updatedAt": "2026-04-21T08:56:13.088Z"
+      "updatedAt": "2026-07-22T11:57:16.475Z"
     },
     "caveman-commit": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
       "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
       "skillPath": "skills/caveman-commit/SKILL.md",
-      "skillFolderHash": "f8d14c8de94e55b43de62b4b3081230248e2f481",
+      "skillFolderHash": "6ba13fa3503e9607eed8f94828b524510d83b7ef",
       "installedAt": "2026-04-21T09:45:30.853Z",
-      "updatedAt": "2026-04-21T09:45:30.853Z"
+      "updatedAt": "2026-07-22T11:57:08.239Z"
     },
     "pptx": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/pptx/SKILL.md",
-      "skillFolderHash": "10b3d70962e489867ddfee7da92f7da6b0eccc4f",
-      "pluginName": "document-skills",
+      "skillFolderHash": "64529c8b3f35fe632b7256bd2f6d46e4b40160ce",
       "installedAt": "2026-04-28T20:40:26.975Z",
-      "updatedAt": "2026-04-28T20:40:26.975Z"
+      "updatedAt": "2026-07-22T11:57:20.198Z"
     },
     "btca-local": {
       "source": "davis7dotsh/better-context",
@@ -79,20 +78,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/frontend-design/SKILL.md",
-      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
-      "pluginName": "example-skills",
+      "skillFolderHash": "0d5b74a14bdf3ebcd64f352d06376a2ef05ed296",
       "installedAt": "2026-05-11T14:23:54.920Z",
-      "updatedAt": "2026-05-11T14:23:54.920Z"
+      "updatedAt": "2026-07-22T11:57:22.104Z"
     },
     "grill-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/productivity/grill-me/SKILL.md",
-      "skillFolderHash": "8320e7b87f7b208f50ce165b1dd43d1e93c8e801",
-      "pluginName": "mattpocock-skills",
+      "skillFolderHash": "c817f6f36acd483294144694a935a76d3e3eb101",
       "installedAt": "2026-06-21T01:01:27.931Z",
-      "updatedAt": "2026-06-21T01:01:27.931Z"
+      "updatedAt": "2026-07-22T11:57:23.889Z"
     }
   },
   "dismissed": {

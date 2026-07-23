@@ -22,4 +22,5 @@ Code Guidance:
 - Only comment on code where necessary.
 - If a block of code requires a paragraph of comments to explain it is probably over complicated and can be simiplified.
 - The most important thing about the code we write is the type signatures, that is what dictates the quality of the code.
+- Prefer schema-driven configuration: normalize raw input, validate defaults and conflicts once with a typed schema, then declaratively map the resulting valid configuration to classes or behavior without further branching.
 - Don't use docstrings, comments with special decerators or anything other than simple single line comments, if you need to spread a comment over multiple lines just createa new line with another comment on.

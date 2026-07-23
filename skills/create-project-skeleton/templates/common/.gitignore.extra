@@ -1,0 +1,11 @@
+# Append to .gitignore when the project (or any workspace) uses Rust.
+
+# Rust
+target/
+
+# Terraform / OpenTofu
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/*.tfvars
+infra/.terraform.lock.hcl
