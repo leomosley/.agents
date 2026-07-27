@@ -11,7 +11,7 @@ General Guidance:
 
 Code Guidance:
 
-- Keep things simple. Channel "yagni" enery unless told otherwise.
+- Keep things simple.
 - Don't be scared to propose bold ideas if they can meaningfully beneift our work.
 - Tests are good! Endless smoke tests, regression tests for feature deletions, etc, much less good. Tests should be focussed not slop.
 - You are to program using neagtive space programming.
