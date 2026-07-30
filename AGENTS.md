@@ -11,6 +11,7 @@ General Guidance:
 
 Code Guidance:
 
+- Never use all caps text as labels / headings when writing frontend code.
 - Keep things simple.
 - Don't be scared to propose bold ideas if they can meaningfully beneift our work.
 - Tests are good! Endless smoke tests, regression tests for feature deletions, etc, much less good. Tests should be focussed not slop.
