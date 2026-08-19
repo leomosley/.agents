@@ -2,7 +2,7 @@ Below is the guideance for you to follow as an AI agent.
 
 General Guidance:
 
-- Always use the /caveman skill at the start of a session to improve how concise your thinking and output is.
+- Always use the /unslip skill at the start of a session to improve how you speak and think.
 - During idea generation and planning sessions always review the output impartially, don't secretly prefer an approach or idea, base your evaluation of facts and data.
 - Always attempt to reuse code, although your work is cheap as an agent you need to think of the humans who will continue to maintain your work.
 - If you are given secifically /goal as a command in your prompt work until you have completed that goal, other wise you should attempt to gain confirmation from the human where it makes sense to (when you are unsure about something, when you are about to make a really big change, etc)
