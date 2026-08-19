@@ -1,56 +1,43 @@
 ---
 name: pigeon
 description: >
-  Share a local artifact with the user through Pigeon, or capture and share a
-  screenshot from macOS, Windows, Linux, or a headless browser. Use when asked
-  to share a file, screenshot a page, show visual output, or provide an artifact URL.
+  Share a local artifact with the user through Pigeon and return a public URL.
+  Use when asked to share a file, upload output, or provide an artifact link.
+  To capture a screenshot first, use the take-screenshot skill.
 ---
 
 # Pigeon
 
-Upload artifacts to the user's configured Cloudflare R2 bucket and return the
-public URL. Never expose credentials or print the output of `pigeon env`.
+Upload an artifact to the user's Cloudflare R2 bucket and return its public URL.
+Never expose credentials or print the raw output of `pigeon env`.
 
-## Share an existing file
+## Upload an artifact
 
-1. Confirm `aws` is installed. Run `pigeon doctor` if setup is uncertain.
-2. Keep the original extension and generate a UUID key. Use a platform-native
-   UUID command or generate one with the available runtime.
-3. Load credentials and upload in one shell invocation so secrets do not linger:
+1. Load the route into the environment. Do this and the upload in a single shell
+   invocation so the secrets never linger:
 
-```sh
-eval "$(pigeon env --shell sh)"
-key="$(uuidgen | tr '[:upper:]' '[:lower:]').png"
-aws s3 cp "$file" "s3://$PIGEON_BUCKET/$key" \
-  --endpoint-url "$PIGEON_ENDPOINT" \
-  --content-type "image/png"
-printf '%s/%s\n' "$PIGEON_PUBLIC_BASE_URL" "$key"
-unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_REGION
-```
+   - sh: `eval "$(npx -y p1geon env --shell sh)"`
+   - PowerShell: `Invoke-Expression (& npx -y p1geon env --shell powershell | Out-String)`
 
-PowerShell:
+   This runs Pigeon via `npx`, so it works whether or not `pigeon` is on `PATH`.
+   If `pigeon` (or `p1geon`) is already installed globally you may call it
+   directly instead. It sets `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`,
+   `AWS_REGION` (`auto`), `PIGEON_BUCKET`, `PIGEON_ENDPOINT`, and
+   `PIGEON_PUBLIC_BASE_URL`.
 
-```powershell
-Invoke-Expression (& pigeon env --shell powershell | Out-String)
-$key = "$(New-Guid).png"
-aws s3 cp $file "s3://$env:PIGEON_BUCKET/$key"   --endpoint-url $env:PIGEON_ENDPOINT   --content-type "image/png"
-"$env:PIGEON_PUBLIC_BASE_URL/$key"
-Remove-Item Env:AWS_ACCESS_KEY_ID, Env:AWS_SECRET_ACCESS_KEY, Env:AWS_REGION
-```
+2. Choose a random UUID object key that keeps the file's original extension.
 
-Set the actual extension and MIME type. Do not upload secret-bearing files.
+3. Upload with a single authenticated S3 `PUT` request to
+   `$PIGEON_ENDPOINT/$PIGEON_BUCKET/<key>`, signed with AWS SigV4 using the loaded
+   credentials and region `auto`, with `Content-Type` set to the file's MIME type.
 
-## Capture a screenshot
+   Do a **direct signed HTTP PUT**. This is the primary method: write the handful
+   of SigV4 lines in whatever runtime is already available (Python, Node, Go, a
+   curl invocation, etc.). Do not assume the `aws` CLI or any other tool is
+   installed — only reach for something like `aws s3 cp` if it already exists and
+   is genuinely simpler.
 
-- URL or headless server: use Playwright if installed, otherwise a Chromium
-  executable with `--headless=new --screenshot=<path> --window-size=1440,900 <url>`.
-- macOS desktop: `screencapture -x <path>.png`.
-- Linux Wayland: `grim <path>.png`.
-- Linux X11: use `maim`, then `scrot`, then ImageMagick `import -window root`.
-- Windows PowerShell: capture `SystemInformation.VirtualScreen` with
-  `System.Drawing.Graphics.CopyFromScreen`.
+4. Return the public URL `$PIGEON_PUBLIC_BASE_URL/<key>` and the local file path.
 
-A headless machine has no desktop to capture. Capture a URL with a headless
-browser; only use Xvfb when the target is an actual GUI process.
-
-After upload, return the public URL and local file path.
+Set the real extension and MIME type. Clear the credentials from the environment
+when done. Never upload files that carry secrets (`.env`, keys, tokens).
