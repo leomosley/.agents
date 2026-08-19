@@ -11,6 +11,6 @@ Checkout a new branch off the default branch (could be main, master, dev, or dev
 
 Implement the feature or fix. Keep the change focused on the user's goal and don't let it sprawl. Reuse existing code where you can, and lean on the repo's own patterns. Verify your work with the repo's tests or build before moving on.
 
-Once the change is ready, file a PR using the `file-pr` skill.
+Once the change is ready, file a PR using the `file-pr` skill, if there are any visual changes always include screenshots of what this change is using /take-screenshot and /pigeon,
 
 After the PR is open, babysit it with the `babysit-pr` skill until the review bots and required checks are green.
