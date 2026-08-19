@@ -28,4 +28,6 @@ Good:
 
 - The 'new worktree' default was ignored when starting new threads on existing worktrees. Now preferences always apply.
 
+For UI or other visual changes, include a screenshot in the PR description so reviewers can see the result. Use the `take-screenshot` skill to capture the image, and the `pigeon` skill to upload it — this returns a public URL you can embed directly with `![...](url)`.
+
 pen a real PR rather than a draft so review bots run. IF the user also asked to babysit it, continue with 'babysit-pr' skill.
