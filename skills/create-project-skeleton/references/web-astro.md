@@ -1,4 +1,4 @@
-# Web — Astro + TypeScript + TailwindCSS
+# Web Astro + TypeScript + TailwindCSS
 
 Default web stack when the user names no framework.
 
@@ -19,7 +19,7 @@ cd apps/web && bunx astro add tailwind react --yes
 
 Post-scaffold cleanup:
 
-- Delete demo content in `src/pages` / `src/components` — leave a minimal
+- Delete demo content in `src/pages` / `src/components` leave a minimal
   `src/pages/index.astro` or nothing. This skill ships a skeleton, not a demo.
 - Ensure the workspace `package.json` name is `{{SCOPE}}/{{NAME}}-web`.
 - Remove any `.git` the scaffolder created inside `apps/web`.

@@ -1,4 +1,4 @@
-# Web — Next.js
+# Web Next.js
 
 Use when the user explicitly asks for Next.js. Lives under `apps/web/`.
 
@@ -8,7 +8,7 @@ Non-negotiable defaults for a Next.js app in these repos:
 
 - **App Router** (not Pages Router)
 - **Cache Components** enabled
-- **No `src/` directory** — `app/` sits at the app root
+- **No `src/` directory** `app/` sits at the app root
 - **TailwindCSS**
 - **No React Compiler**
 - **Custom import alias `~/`** instead of the default `@/`
@@ -29,7 +29,7 @@ bunx create-next-app@latest apps/web \
 
 ## Enable Cache Components
 
-`create-next-app` won't set this — edit `apps/web/next.config.ts`:
+`create-next-app` won't set this edit `apps/web/next.config.ts`:
 
 ```ts
 import type { NextConfig } from "next";
@@ -48,12 +48,12 @@ Use whatever the installed major expects.
 ## Post-scaffold cleanup
 
 - Strip demo boilerplate from `app/page.tsx` and `app/globals.css` down to a
-  minimal shell — this skill ships a skeleton, not a landing page.
+  minimal shell this skill ships a skeleton, not a landing page.
 - Set the workspace `package.json` name to `{{SCOPE}}/{{NAME}}-web`.
 - Confirm `tsconfig.json` `paths` maps `~/*` → `./*` (or `./app/*` as desired).
 
 ## Notes
 
 - Root workflow: `ci.yml`. Add `deploy.yml` + `infra/` if the user wants hosting
-  (adjust the deploy target — Next.js typically deploys to Vercel or a Node/edge
+  (adjust the deploy target Next.js typically deploys to Vercel or a Node/edge
   runtime rather than a bare Cloudflare Worker).

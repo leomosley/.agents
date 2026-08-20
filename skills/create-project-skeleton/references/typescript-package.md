@@ -1,11 +1,11 @@
-# Package — TypeScript + Bun
+# Package TypeScript + Bun
 
 Reusable library published to npm. Lives under `packages/<name>/`.
 
 ## Skeleton only
 
 Create `packages/<name>/` with `package.json` + `tsconfig.json`. No `src/`
-implementation — just an empty `src/` dir with `.gitkeep`.
+implementation just an empty `src/` dir with `.gitkeep`.
 
 ## `packages/<name>/package.json`
 

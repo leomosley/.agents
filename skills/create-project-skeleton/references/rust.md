@@ -38,7 +38,7 @@ workspace = true
 
 ## CI
 
-Use `templates/github/workflows/check.yml` — it runs `cargo fmt --check`,
+Use `templates/github/workflows/check.yml` it runs `cargo fmt --check`,
 `cargo clippy -D warnings`, and `cargo test`. For a pure-Rust repo drop the
 `typescript` job.
 

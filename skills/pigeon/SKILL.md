@@ -34,7 +34,7 @@ Never expose credentials or print the raw output of `pigeon env`.
    Do a **direct signed HTTP PUT**. This is the primary method: write the handful
    of SigV4 lines in whatever runtime is already available (Python, Node, Go, a
    curl invocation, etc.). Do not assume the `aws` CLI or any other tool is
-   installed — only reach for something like `aws s3 cp` if it already exists and
+   installed only reach for something like `aws s3 cp` if it already exists and
    is genuinely simpler.
 
 4. Return the public URL `$PIGEON_PUBLIC_BASE_URL/<key>` and the local file path.
