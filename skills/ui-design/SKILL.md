@@ -1,6 +1,7 @@
 ---
 name: ui-design
 description: Use when building or styling a UI in Linear's dark, restrained, software-craft aesthetic — a near-black canvas with a single lavender-blue accent, a four-step surface ladder, and negative-tracking display type.
+disable-model-invocation: true
 ---
 
 ## Overview
