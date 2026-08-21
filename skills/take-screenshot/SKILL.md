@@ -14,7 +14,7 @@ Capture an image, then upload it with the `pigeon` skill and return the URL.
 
 This skill remembers what works on each platform. Before anything else, look in
 the `reference/` directory next to this file for a note matching the current
-platform — for example `reference/macos.md`, `reference/windows.md`,
+platform for example `reference/macos.md`, `reference/windows.md`,
 `reference/linux-wayland.md`, `reference/linux-x11.md`, or `reference/headless.md`.
 If a matching note exists, follow it verbatim instead of re-deriving the method.
 
@@ -28,7 +28,7 @@ If a matching note exists, follow it verbatim instead of re-deriving the method.
 3. On the **first** success, immediately record how you did it: write a concise
    note to `reference/<platform>.md` in this skill's directory, named after the
    platform you succeeded on. Create `reference/` if it does not exist. Keep it
-   short — the exact command(s), the tool used, any authorization quirk, and how
+   short the exact command(s), the tool used, any authorization quirk, and how
    you targeted a specific window. This makes the next capture instant.
 
 ## Then share it

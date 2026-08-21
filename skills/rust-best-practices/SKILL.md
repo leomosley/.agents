@@ -97,6 +97,6 @@ impl Connection<Connected> {
 
 ### Comments
 
-- `//` comments explain _why_ (safety, workarounds, design rationale) — not _what_ or _how_
+- `//` comments explain _why_ (safety, workarounds, design rationale) not _what_ or _how_
 - Prefer self-documenting code: clear names and small functions over comments
 - Every `TODO` needs a linked issue: `// TODO(#42): ...`

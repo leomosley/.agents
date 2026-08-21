@@ -1,7 +1,7 @@
 ---
 name: create-project-skeleton
 description: >
-  Scaffolds a new project skeleton in the current directory — monorepo layout,
+  Scaffolds a new project skeleton in the current directory monorepo layout,
   tooling, DevOps (Terraform infra, GitHub Actions, VSCode, Prettier), git init
   and an initial 'init' commit. Everything except the actual app/package source
   code. Use when the user says "scaffold a project", "create a project
@@ -16,26 +16,26 @@ tooling + DevOps. NOT the actual app/package source code (that comes later).
 Templates and reference docs live in this skill dir. Copy templates literally,
 then substitute placeholders. Placeholders always look like `{{NAME}}`.
 
-## Step 1 — Gather requirements
+## Step 1 Gather requirements
 
 Ask the user (skip any already answered in the prompt):
 
-1. **Project name** — used for repo, root `package.json` name, `@scope`. Default scope `@leomosley`.
-2. **Project type** — one or more of:
-   - `web` — website / frontend app
-   - `package` — reusable library
-   - `cli` — command-line tool
-3. **Language** — `typescript` (default) or `rust`.
+1. **Project name** used for repo, root `package.json` name, `@scope`. Default scope `@leomosley`.
+2. **Project type** one or more of:
+   - `web` website / frontend app
+   - `package` reusable library
+   - `cli` command-line tool
+3. **Language** `typescript` (default) or `rust`.
    - For `web` with no framework specified, default to **Astro + TypeScript + TailwindCSS**.
    - If the user asks for **Next.js**, follow `references/web-nextjs.md`.
    - For `package`/`cli` default to **TypeScript + Bun**.
    - Only use Rust when the user explicitly asks.
-4. **Infra / DevOps** — does the project need Terraform infra + deploy workflows?
+4. **Infra / DevOps** does the project need Terraform infra + deploy workflows?
    Default yes for `web`, no for `package`/`cli` (those get a release workflow instead).
 
 If anything is ambiguous, ask before scaffolding. Do not guess the project name.
 
-## Step 2 — Read the relevant reference docs
+## Step 2 Read the relevant reference docs
 
 Read only what applies:
 
@@ -50,7 +50,7 @@ Read only what applies:
 
 Each reference lists which templates to copy and how to fill placeholders.
 
-## Step 3 — Scaffold
+## Step 3 Scaffold
 
 Layout (monorepo, Turborepo + Bun):
 
@@ -72,11 +72,11 @@ Layout (monorepo, Turborepo + Bun):
   Cargo.toml rust-toolchain.toml   # rust only
 ```
 
-Do NOT create source files inside `apps/*` or `packages/*` — only the empty
+Do NOT create source files inside `apps/*` or `packages/*` only the empty
 workspace dirs. This skill produces a skeleton, not an implementation.
 
 **Prefer official scaffolders** to initialise an app inside `apps/<name>/` where
-one exists — they stay current with framework defaults. Run them non-interactively
+one exists they stay current with framework defaults. Run them non-interactively
 with the flags the reference specifies, then strip any generated boilerplate the
 skeleton doesn't want (demo pages, sample content, git init they may add).
 
@@ -94,7 +94,7 @@ Rules:
 - Merge `.gitignore` fragments (common + rust if applicable).
 - Never write secrets. `*.tfvars` stays gitignored; only ship `terraform.tfvars.example`.
 
-## Step 4 — Git
+## Step 4 Git
 
 - If no git repo exists (`git rev-parse --is-inside-work-tree` fails), run
   `git init` and set branch `main`. Ask the user for the repo name if not
@@ -102,7 +102,7 @@ Rules:
 - Stage everything: `git add -A`.
 - Commit exactly: `git commit -m "init"`.
 
-## Step 5 — Report
+## Step 5 Report
 
 Summarise what was created and list obvious next steps (e.g. "run `bun install`",
 "add your first app under `apps/`"). Keep it short.

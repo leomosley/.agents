@@ -1,31 +1,31 @@
 ---
 name: ui-design
-description: Use when building or styling a UI in Linear's dark, restrained, software-craft aesthetic — a near-black canvas with a single lavender-blue accent, a four-step surface ladder, and negative-tracking display type.
+description: Use when building or styling a UI in Linear's dark, restrained, software-craft aesthetic a near-black canvas with a single lavender-blue accent, a four-step surface ladder, and negative-tracking display type.
 disable-model-invocation: true
 ---
 
 ## Overview
 
-Linear's marketing canvas is the deepest dark surface in this collection — `{colors.canvas}` is "#010102", essentially pure black with a faint blue tint. On top sits a four-step surface ladder (`{colors.surface-1}` through `{colors.surface-4}`) for cards, panels, and lifted tiles, with hairline borders running from `{colors.hairline}` ("#23252a") up through `{colors.hairline-strong}` and `{colors.hairline-tertiary}`. Light gray text (`{colors.ink}` "#f7f8f8") carries the body and headlines.
+Linear's marketing canvas is the deepest dark surface in this collection `{colors.canvas}` is "#010102", essentially pure black with a faint blue tint. On top sits a four-step surface ladder (`{colors.surface-1}` through `{colors.surface-4}`) for cards, panels, and lifted tiles, with hairline borders running from `{colors.hairline}` ("#23252a") up through `{colors.hairline-strong}` and `{colors.hairline-tertiary}`. Light gray text (`{colors.ink}` "#f7f8f8") carries the body and headlines.
 
-The single chromatic accent is **Linear lavender-blue** `{colors.primary}` ("#5e6ad2") — used on the brand mark, focus rings, and the primary CTA button. A lighter hover state (`{colors.primary-hover}` "#828fff") and a focus-tinted variant (`{colors.primary-focus}` "#5e69d1") extend the same hue. Linear avoids saturated greens, oranges, reds, etc. on the marketing canvas — the only semantic color is `{colors.semantic-success}` ("#27a644") for status pills and the rare success indicator.
+The single chromatic accent is **Linear lavender-blue** `{colors.primary}` ("#5e6ad2") used on the brand mark, focus rings, and the primary CTA button. A lighter hover state (`{colors.primary-hover}` "#828fff") and a focus-tinted variant (`{colors.primary-focus}` "#5e69d1") extend the same hue. Linear avoids saturated greens, oranges, reds, etc. on the marketing canvas the only semantic color is `{colors.semantic-success}` ("#27a644") for status pills and the rare success indicator.
 
 Display type runs Linear's custom sans (with `SF Pro Display` fallback) at weight 500-700 with negative letter-spacing scaling from -3.0px at 80px down to 0 at body. The body family is Linear's text cut, and a Linear Mono is reserved for code snippets in product screenshots.
 
-The page rhythm is **dense product screenshots** — Linear's marketing leads with high-fidelity captures of the product UI (issue list, project view, dashboard) framed in `{colors.surface-1}` panels with `{rounded.xl}` 16px corners. The chrome is intentionally minimal so the app screenshots can do the heavy lifting.
+The page rhythm is **dense product screenshots** Linear's marketing leads with high-fidelity captures of the product UI (issue list, project view, dashboard) framed in `{colors.surface-1}` panels with `{rounded.xl}` 16px corners. The chrome is intentionally minimal so the app screenshots can do the heavy lifting.
 
 **Key Characteristics:**
-- **Dark-canvas marketing system** — `{colors.canvas}` ("#010102") is the deepest dark in this collection.
-- **Lavender-blue brand accent** (`{colors.primary}` "#5e6ad2") — used scarcely on brand mark, focus, and the primary CTA.
+- **Dark-canvas marketing system** `{colors.canvas}` ("#010102") is the deepest dark in this collection.
+- **Lavender-blue brand accent** (`{colors.primary}` "#5e6ad2") used scarcely on brand mark, focus, and the primary CTA.
 - Four-step surface ladder (canvas → surface-1 → surface-2 → surface-3 → surface-4) carries hierarchy without shadow.
 - Display tracking pulls aggressively negative (-3.0px at 80px); body holds at -0.05px.
-- Cards use `{rounded.lg}` 12px corners with 1px hairline borders — never pill, rarely 16px.
+- Cards use `{rounded.lg}` 12px corners with 1px hairline borders never pill, rarely 16px.
 - **Product UI screenshots** dominate the page. The marketing chrome is a dark frame for the app.
 - No second chromatic color. No atmospheric gradients. No spotlight cards.
 
 ## Design Tokens
 
-### Colors — Dark (default)
+### Colors Dark (default)
 
 ```yaml
 primary: "#5e6ad2"
@@ -53,9 +53,9 @@ semantic-success: "#27a644"
 semantic-overlay: "#000000"
 ```
 
-### Colors — Light
+### Colors Light
 
-Mirrors Linear's product light theme: white canvas, an inverted four-step surface ladder in cool grays, dark ink hierarchy, and soft gray hairlines. The lavender-blue accent is unchanged — it carries across both themes. The primary CTA on light darkens slightly on hover for contrast against the pale canvas.
+Mirrors Linear's product light theme: white canvas, an inverted four-step surface ladder in cool grays, dark ink hierarchy, and soft gray hairlines. The lavender-blue accent is unchanged it carries across both themes. The primary CTA on light darkens slightly on hover for contrast against the pale canvas.
 
 ```yaml
 primary: "#5e6ad2"
@@ -158,5 +158,5 @@ footer:                  { backgroundColor: "{colors.canvas}", textColor: "{colo
 - The four-step surface ladder values are extracted directly from Linear's `--color-bg-level-3`, `--color-line-tint`, etc. CSS variables; they are Linear's canonical surface spec.
 - Form-field error and validation styling is not visible on the inspected pages.
 - The marketing site is dark-only; the light palette above is derived from Linear's product light theme, not the marketing canvas.
-- Linear's actual product UI uses a richer color-tag palette (red, orange, yellow, green, blue, purple) for issue priorities and project labels — those colors live in the in-product surfaces shown in mockups.
+- Linear's actual product UI uses a richer color-tag palette (red, orange, yellow, green, blue, purple) for issue priorities and project labels those colors live in the in-product surfaces shown in mockups.
 - The custom display, text, and mono families are proprietary; an open-source substitute is acceptable.

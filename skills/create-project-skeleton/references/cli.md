@@ -1,4 +1,4 @@
-# CLI — TypeScript + Bun
+# CLI TypeScript + Bun
 
 Command-line tool published to npm, run via `bunx`/`npx`. Lives under
 `packages/cli/`.
@@ -10,13 +10,13 @@ Create `packages/cli/` with `package.json` + `tsconfig.json` and an empty
 
 ## Preferred libraries
 
-The user's usual CLI toolkit — include the ones relevant to the tool:
+The user's usual CLI toolkit include the ones relevant to the tool:
 
-- `commander` — arg parsing / command tree
-- `@clack/prompts` — interactive prompts
-- `chalk` — terminal colors
-- `ora` — spinners
-- `zod` — schema validation / config parsing
+- `commander` arg parsing / command tree
+- `@clack/prompts` interactive prompts
+- `chalk` terminal colors
+- `ora` spinners
+- `zod` schema validation / config parsing
 
 ## `packages/cli/package.json`
 
