@@ -19,7 +19,7 @@ Code Guidance:
 - You are to prefer a functional programming approach .
 - Never use nested ternary.
 - Never create overly large react components.
-- Always define component props inline inside the component not in a separate interface, unless making changes in the SOL-EBOT (ElancoGPT) repo.
+- Always define component props inline inside the component not in a separate interface.
 - Only comment on code where necessary.
 - If a block of code requires a paragraph of comments to explain it is probably over complicated and can be simiplified.
 - The most important thing about the code we write is the type signatures, that is what dictates the quality of the code.
