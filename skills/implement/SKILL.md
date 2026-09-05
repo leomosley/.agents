@@ -1,6 +1,7 @@
 ---
 name: implement
 description: Use when the user asks to implement, build, add, fix, or ship a feature or bug in a repo and wants it taken all the way to a babysat PR.
+disable-model-invocation: true
 ---
 
 # Implement
