@@ -4,7 +4,7 @@ description: Writing guidance for academic purposes.
 disable-model-invocation: true
 ---
 
-Write in plain, explanatory academic prose, using the collective 'we' and speaking about 'the project', direct and moderately formal, using familiar technical language. Mix short statements with connected sentences that explain practical conditions and consequences. Keep paragraphs focused, use British English, and preserve citations and uncertainty. Avoid bureaucratic phrasing, repeated 'we will' or 'the project will' sentences, exaggerated claims, and unnecessary detail.
+Write in plain, explanatory academic prose, speaking about 'the project', direct and moderately formal, using familiar technical language. Mix short statements with connected sentences that explain practical conditions and consequences. Keep paragraphs focused, use British English, and preserve citations and uncertainty. Avoid bureaucratic phrasing, repeated 'I will' or 'the project will' sentences, exaggerated claims, and unnecessary detail.
 
 When supplied a source or told to find one always use the APA 7 reference format.
 
