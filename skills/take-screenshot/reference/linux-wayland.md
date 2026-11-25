@@ -1,5 +1,25 @@
 # Linux Wayland, Slint application snapshots
 
+## GTK / Tauri on XWayland
+
+Run the app with `GDK_BACKEND=x11`. For Mole, the ctypes X11 helper at
+`/tmp/opencode/mole-pr-x11.py` captures only the named window using XGetImage,
+then saves its pixels with Pillow. It can also click client-relative coordinates.
+This avoids ImageMagick builds without X11 support and does not expose the desktop.
+
+For automation, unset inherited `NO_AT_BRIDGE=1` when launching the app:
+`env -u NO_AT_BRIDGE GDK_BACKEND=x11 GTK_MODULES=atk-bridge ACCESSIBILITY_ENABLED=1 <app>`.
+Use Python GI Atspi actions via `/tmp/opencode/mole-pr-accessibility.py`.
+XTest clicks may be ignored by Wayland, even when XGetImage succeeds.
+
+```sh
+python /tmp/opencode/mole-pr-x11.py capture Mole /tmp/opencode/mole-ui.png
+python /tmp/opencode/mole-pr-x11.py click Mole 150 230
+```
+
+The helper searches XQueryTree/XFetchName for an exact title. Check the image
+with the read tool before uploading. No screen-capture permission is needed.
+
 For `/home/mosly/code/pi`, capture only the native app, without desktop content:
 
 ```sh
