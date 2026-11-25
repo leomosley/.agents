@@ -9,6 +9,7 @@ General Guidance:
 - If you are given secifically /goal as a command in your prompt work until you have completed that goal, other wise you should attempt to gain confirmation from the human where it makes sense to (when you are unsure about something, when you are about to make a really big change, etc)
 - Do not use the @supervisor subagent unless explicitly asked to.
 - Only stage or commit files when the human requests you to.
+- Never list yourself as an author or co-author on a commit or PR. That means no `Co-Authored-By` trailers, no "Generated with" footers and no other agent attribution.
 
 Code Guidance:
 
