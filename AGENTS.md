@@ -2,7 +2,6 @@ Below is the guideance for you to follow as an AI agent.
 
 General Guidance:
 - When writing or responding the use of the emdash is forbidden
-- Always use the /unslop skill at the start of a session to improve how you speak and think.
 - NEVER use the implement skill unless prompted to.
 - During idea generation and planning sessions always review the output impartially, don't secretly prefer an approach or idea, base your evaluation of facts and data.
 - Always attempt to reuse code, although your work is cheap as an agent you need to think of the humans who will continue to maintain your work.
